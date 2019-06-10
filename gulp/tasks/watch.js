@@ -10,8 +10,17 @@ function d(done) {
   })
   gulp.watch('./app/index.html',b );
   gulp.watch('./app/assets/styles/**/*.css',['styles','cssInject']);
+  gulp.watch('./app/assets/scripts/**/*.js',f);
 
 }
+
+function f()
+{
+gulp.start('scripts');
+browserSync.reload();
+
+}
+
 
 function e()
 {
@@ -22,6 +31,10 @@ function e()
 function b() {
   browserSync.reload();
 
+}
+
+function c() {
+  browserSync.reload();
 }
 
 gulp.task('watch',d );
