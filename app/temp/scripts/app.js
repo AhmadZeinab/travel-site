@@ -54,6 +54,10 @@
 
 	var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
+	var _StickyHeader = __webpack_require__(5);
+
+	var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
 	var _jquery = __webpack_require__(2);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
@@ -61,9 +65,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobileMenu = new _MobileMenu2.default();
-
+	var stickyHeader = new _StickyHeader2.default();
 	new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
 	new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
+	ss;
 
 /***/ },
 /* 1 */
@@ -10758,6 +10763,96 @@
 	  Waypoint.Adapter = NoFrameworkAdapter
 	}())
 	;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(2);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _noframework = __webpack_require__(4);
+
+	var _noframework2 = _interopRequireDefault(_noframework);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var StickyHeader = function () {
+	  function StickyHeader() {
+	    _classCallCheck(this, StickyHeader);
+
+	    this.siteHeader = (0, _jquery2.default)(".site-header");
+	    this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
+	    this.createHeaderWaypoints();
+	    this.headerLinks = (0, _jquery2.default)(".primary-nav a");
+	    this.pageSections = (0, _jquery2.default)(".page-section");
+	    this.createPageSectionWaypoints();
+	  }
+
+	  _createClass(StickyHeader, [{
+	    key: 'createHeaderWaypoints',
+	    value: function createHeaderWaypoints() {
+	      var that = this;
+	      new Waypoint({
+	        element: this.headerTriggerElement[0],
+	        handler: function handler(direction) {
+	          if (direction == "down") {
+	            that.siteHeader.addClass("site-header__dark");
+	          } else {
+	            {
+	              that.siteHeader.removeClass("site-header__dark");
+	            }
+	          }
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'createPageSectionWaypoints',
+	    value: function createPageSectionWaypoints() {
+	      var that = this;
+	      this.pageSections.each(function () {
+	        var currentPageSection = this;
+	        new Waypoint({
+	          element: currentPageSection,
+	          handler: function handler(direction) {
+	            if (direction == "down") {
+	              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+	              that.headerLinks.removeClass("is-current-link");
+	              (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
+	            }
+	          },
+	          offset: "18%"
+	        });
+	        new Waypoint({
+	          element: currentPageSection,
+	          handler: function handler(direction) {
+	            if (direction == "up") {
+	              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+	              that.headerLinks.removeClass("is-current-link");
+	              (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
+	            }
+	          },
+	          offset: "-40%"
+	        });
+	      });
+	    }
+	  }]);
+
+	  return StickyHeader;
+	}();
+
+	exports.default = StickyHeader;
 
 /***/ }
 /******/ ]);
