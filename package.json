@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "^2.2.4",
     "normalize.css": "^4.1.1",
-    "postcss-modules-scope": "^1.1.0"
+    "postcss-modules-scope": "^1.1.0",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
