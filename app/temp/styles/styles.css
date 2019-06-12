@@ -1084,14 +1084,11 @@ transition: background-color .3s ease-out;
 
   .site-header {
     background-color: rgba(#2f5572,.3);
-<<<<<<< HEAD
-=======
     position: fixed;
   }
 
   .site-header__dark {
     background-color: rgba(23,51,72,.85);
->>>>>>> sticky-header
   }
 }
 
