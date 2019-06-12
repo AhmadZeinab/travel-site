@@ -634,7 +634,7 @@ border-bottom: 10px solid #2f5572;
 @media (min-width:1010px) {
 
   .page-section__testimonials.lazyloaded {
-    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+    background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
     background-size: cover;
   }
 }
@@ -977,11 +977,11 @@ margin-bottom: 98px;
 /* Testing 1 2 3*/
 
 .icon {
-  background-image: url('/assets/images/sprites/sprite-cbdfe7ac.svg') ;
+  background-image: url('../../assets/images/sprites/sprite-cbdfe7ac.svg') ;
 }
 
 .no-svg .icon{
-  background-image: url('/assets/images/sprites/sprite-cbdfe7ac.png') ;
+  background-image: url('../../assets/images/sprites/sprite-cbdfe7ac.png') ;
 }
 
 .icon--clear-view-escapes {
