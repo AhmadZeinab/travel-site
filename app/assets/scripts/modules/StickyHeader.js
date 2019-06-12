@@ -11,9 +11,9 @@ class StickyHeader {
     this.pageSections= $(".page-section");
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
-<<<<<<< HEAD
+
     this.refreshWaypoints();
-=======
+
     this.  refreshWaypoints();
   }
 

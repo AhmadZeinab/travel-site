@@ -1090,13 +1090,13 @@ transition: background-color .3s ease-out;
 }
 
 .site-header__is-expanded {
-  background-color: rgba(#2f5572,.55);
+  background-color: rgba(47,85,114,.55);
 }
 
 @media (min-width:800px) {
 
   .site-header {
-    background-color: rgba(#2f5572,.3);
+    background-color: rgba(47,85,114,.3);
     position: fixed;
   }
 
@@ -1299,7 +1299,7 @@ padding-top:10px;
   font-weight: 300;
   padding: 5px 8px;
   font-size: .8rem;
-  background-color: rgba(#2f5572,.5);
+  background-color: rgba(47,85,114,.5);
 }
 
 @media (min-width:800px) {
