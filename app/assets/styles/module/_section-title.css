@@ -29,4 +29,9 @@ strong{
 &__blue{
   color:$mainBlue;
 }
+
+&__less-margin{
+  margin-bottom: 1.3rem;
+  margin-top: 0;
+}
 }
