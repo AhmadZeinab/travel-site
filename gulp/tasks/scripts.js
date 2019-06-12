@@ -13,4 +13,4 @@ console.log(status.toString());
 
 }
 
-gulp.task('scripts',a);
+gulp.task('scripts',['modernizr'],a);

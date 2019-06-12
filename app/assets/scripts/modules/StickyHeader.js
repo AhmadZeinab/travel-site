@@ -15,7 +15,6 @@ class StickyHeader {
     this.refreshWaypoints();
 =======
     this.  refreshWaypoints();
->>>>>>> lazyloading
   }
 
   refreshWaypoints()
