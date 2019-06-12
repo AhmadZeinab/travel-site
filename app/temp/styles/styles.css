@@ -484,6 +484,10 @@ a{
   max-width: 976px;
 }
 
+.wrapper__narrow{
+  max-width: 470px;
+}
+
 .wrapper__b-margin{
   margin-bottom: 1rem;
 }
@@ -874,6 +878,11 @@ text-align: center;
 
 .section-title__blue{
   color:#2f5572;
+}
+
+.section-title__less-margin{
+  margin-bottom: 1.3rem;
+  margin-top: 0;
 }
 
 .feature-item{
